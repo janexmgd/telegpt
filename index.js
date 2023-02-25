@@ -48,5 +48,8 @@ bot.on('text', async (ctx) => {
   ctx.reply(botResponse);
   console.log(completion.data.choices[0]);
 });
-
-bot.launch();
+try {
+  bot.launch();
+} catch (error) {
+  console.log(error);
+}
